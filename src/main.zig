@@ -55,8 +55,14 @@ pub fn main() !void {
 
     try std.compress.zlib.compress(data_input_stream.reader(), output_array_list.writer(), .{});
 
-    try insert_stmt.exec(.{}, .{ .id = 5, .data = output_array_list.items });
-
+    try insert_stmt.exec(
+        .{}, 
+        .{ 
+            .id = 7, 
+            .data = output_array_list.items 
+        }
+    );
+    
     try stdout.print("data compressed stream: {s}", .{output_array_list.items});
 
     try bw.flush(); // Don't forget to flush!
