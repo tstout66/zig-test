@@ -1,0 +1,18 @@
+{
+    "app_instance_id": "12345678901234567890123456789012",
+    "events": [
+      {
+         "name": "campaign_details",
+         "params": {
+           "campaign_id": "google_1234",
+           "campaign": "Summer_fun",
+           "source": "google",
+           "medium": "cpc",
+           "term": "summer+travel",
+           "content": "logolink",
+           "session_id": "123",
+           "engagement_time_msec": "100"
+         }
+      }
+    ]
+}
