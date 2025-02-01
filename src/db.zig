@@ -27,10 +27,10 @@ pub fn init(self: @This()) !self {
         .threading_mode = .MultiThread,
     });
 
-    var query_stmt = try db.prepare(query);
+    self.query_stmt = try db.prepare(query);
     defer query_stmt.deinit();
 
-    var insert_stmt = try db.prepare(insert_query);
+    self.insert_stmt = try db.prepare(insert_query);
     defer insert_stmt.deinit();
 
     try db.exec(create_table_query, .{}, .{});
